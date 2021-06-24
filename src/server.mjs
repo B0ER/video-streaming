@@ -1,12 +1,12 @@
-import http from "http";
+import https from "https";
 import * as VideoController from "./modules/video/index.mjs";
 
 
 
 /**
  * 
- * @param req {http.IncomingMessage}
- * @param res {http.ServerResponse}
+ * @param {import('http').IncomingMessage} req
+ * @param {import('http').ServerResponse} res
  */
 const httpHandler = async (req, res) => {
 
@@ -23,14 +23,14 @@ const httpHandler = async (req, res) => {
 
 
 
-const httpServer = http.createServer((req, res) => {
+const httpServer = https.createServer((req, res) => {
   httpHandler(req, res);
 });
 
 
 
-httpServer.listen(80, "0.0.0.0", () => {
-  console.log("Server is working at 0.0.0.0:3000");
+httpServer.listen(443, "0.0.0.0", () => {
+  console.log("Server is working at 0.0.0.0:443");
 });
 
 
