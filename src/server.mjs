@@ -29,7 +29,7 @@ const httpServer = http.createServer((req, res) => {
 
 
 
-httpServer.listen(3000, "0.0.0.0", () => {
+httpServer.listen(80, "0.0.0.0", () => {
   console.log("Server is working at 0.0.0.0:3000");
 });
 
