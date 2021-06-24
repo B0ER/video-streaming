@@ -1,0 +1,19 @@
+{
+  "name": "video-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node .\\src\\server.mjs",
+    "start:dev": "nodemon --exec node .\\src\\server.mjs",
+    "start:debug": "nodemon --exec node --inspect .\\src\\server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
