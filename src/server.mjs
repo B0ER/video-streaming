@@ -1,4 +1,4 @@
-import https from "https";
+import transport from "http";
 import * as VideoController from "./modules/video/index.mjs";
 
 const PORT = process.env.PORT || 3000;
@@ -25,13 +25,13 @@ const httpHandler = async (req, res) => {
 
 
 
-const httpServer = https.createServer((req, res) => {
+const httpServer = transport.createServer((req, res) => {
   httpHandler(req, res);
 });
 
 
 
-httpServer.listen(PORT, "0.0.0.0", () => {
+httpServer.listen(PORT, () => {
   console.log(`Server is working at 0.0.0.0:${PORT}`);
 });
 
