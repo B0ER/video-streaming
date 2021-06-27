@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.mjs",
   "scripts": {
-    "start": "node ./src/server.mjs",
+    "start": "node ./src/hls-server.mjs",
     "start:dev": "nodemon --exec node ./src/server.mjs",
     "start:debug": "nodemon --exec node --inspect ./src/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "hls-server": "^1.5.0"
   }
 }
